@@ -9,6 +9,15 @@ module.exports = function( grunt ) {
 
     // Project configuration
     // ---------------------
+    
+    // compile dust templates
+    dustjs: {
+      compile: {
+        files: {
+          "scripts/dust-templates.js": "app/scripts/**/*.dust"
+        }
+      }
+    },
 
     // specify an alternate install location for Bower
     bower: {
@@ -68,6 +77,7 @@ module.exports = function( grunt ) {
           'app/*.html',
           'app/styles/**/*.css',
           'app/scripts/**/*.js',
+          'app/scripts/**/*.dust',
           'app/images/**/*'
         ],
         tasks: 'reload'
@@ -175,4 +185,6 @@ module.exports = function( grunt ) {
   // Alias the `test` task to run the `mocha` task instead
   grunt.registerTask('test', 'mocha');
 
+  // load dustjs task
+  grunt.loadNpmTasks('grunt-dustjs');
 };
