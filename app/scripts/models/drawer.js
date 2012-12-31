@@ -1,6 +1,5 @@
 /**
- * A single drawer inside a cabinet, can have different sizes, and multiple slots (collection of components)
- * @namespace bins
+ * A single drawer inside a cabinet, can have different sizes
  * @namespace bins.Models
  * @class Drawer
  * @constructor
@@ -16,16 +15,15 @@ bins.Models.Drawer = Backbone.Model.extend({
     image: null,
 
     /**
-     * The width multiplier of the drawer, in relation to other drawers on it's [top] row
-     * if a row has 3 drawers, and this is set to 2, this drawer will take up half the row
-     * @property {Number} width
+     * The width of the drawer face in cm (for labels -- future release)
+     * @property {Number} labelWidth
      */
-    width: 1,
+    labelWidth:5,
 
     /**
-     * The number of rows this drawer occupies
-     * @property {Number} height
+     * The height of the drawer face in cm (for labels -- future release)
+     * @property {Number} labelHeight
      */
-    height: 1
+    labelHeight:2
   }
 });
