@@ -22,6 +22,14 @@ module.exports = function( grunt ) {
       }
     },
 
+    //concat backbone js files
+    concat: {
+      dist: {
+        src: ["app/scripts/models/*.js","app/scripts/collections/*.js","app/scripts/views/*.js","app/scripts/routes/*.js"],
+        dest: 'temp/scripts/backbone-definitions.js'
+      }
+    },
+
     // specify an alternate install location for Bower
     bower: {
       dir: 'app/components'
@@ -83,6 +91,10 @@ module.exports = function( grunt ) {
       dustjs: {
         files: ['app/styles/**/*.dust'],
         tasks: 'dustjs reload'
+      },
+      concat: {
+        files: ['app/scripts/**/*.js'],
+        tasks: 'concat reload'
       },
       reload: {
         files: [
@@ -198,7 +210,7 @@ module.exports = function( grunt ) {
   grunt.registerTask('test', 'mocha');
 
   // Override build task to include dustjs
-  grunt.registerTask('coffee', ['dustjs']);
+  grunt.registerTask('coffee', ['dustjs', 'concat']);
 
 
 };
