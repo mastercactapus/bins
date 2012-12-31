@@ -1,0 +1,11 @@
+{#cabinet}<div id="cabinet_{.}">{/cabinet}
+{#rows}
+<div style="height:{height}%">
+{#cols}
+<div {#id}id="drawer_{.}" {/id}style="width:{width}%">
+{#rows}{>"cabinet":./}{/rows}
+</div>
+{/cols}
+</div>
+{/rows}
+{#cabinet}</div>{/cabinet}
