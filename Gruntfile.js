@@ -5,7 +5,10 @@ module.exports = function( grunt ) {
   //
   // https://github.com/cowboy/grunt/blob/master/docs/getting_started.md
   //
+  //
+  grunt.loadNpmTasks('grunt-dustjs');
   grunt.initConfig({
+      // load dustjs task
 
     // Project configuration
     // ---------------------
@@ -14,7 +17,7 @@ module.exports = function( grunt ) {
     dustjs: {
       compile: {
         files: {
-          "scripts/dust-templates.js": "app/scripts/**/*.dust"
+          "temp/scripts/dust-templates.js": "app/scripts/**/*.dust"
         }
       }
     },
@@ -60,6 +63,11 @@ module.exports = function( grunt ) {
       all: ['test/**/*.html']
     },
 
+    server: {
+      // Personally I find open-browser annoying and so I remove it
+      app: 'clean lint compass coffee dustjs open-browser watch'
+    },
+
     // default watch configuration
     watch: {
       coffee: {
@@ -71,6 +79,10 @@ module.exports = function( grunt ) {
           'app/styles/**/*.{scss,sass}'
         ],
         tasks: 'compass reload'
+      },
+      dustjs: {
+        files: ['app/styles/**/*.dust'],
+        tasks: 'dustjs reload'
       },
       reload: {
         files: [
@@ -179,12 +191,14 @@ module.exports = function( grunt ) {
       optimize: 'none',
       baseUrl: './scripts',
       wrap: true
-    },
+    }
   });
 
   // Alias the `test` task to run the `mocha` task instead
   grunt.registerTask('test', 'mocha');
 
-  // load dustjs task
-  grunt.loadNpmTasks('grunt-dustjs');
+  // Override build task to include dustjs
+  grunt.registerTask('coffee', ['dustjs']);
+
+
 };

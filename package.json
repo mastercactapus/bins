@@ -3,5 +3,7 @@
   "name": "bins",
   "version": "0.0.1",
   "dependencies": {},
-  "devDependencies": {}
+  "devDependencies": {
+    "grunt-dustjs": "~0.2.1"
+  }
 }
