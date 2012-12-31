@@ -1,11 +1,12 @@
 /**
  * A single drawer inside a cabinet, can have different sizes, and multiple slots (collection of components)
  * @namespace bins
+ * @namespace bins.Models
  * @class Drawer
  * @constructor
  * @extends {Backbone.Model}
  */
-bins.Drawer = Backbone.Model.extend({
+bins.Models.Drawer = Backbone.Model.extend({
   defaults: {
     
     /**

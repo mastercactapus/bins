@@ -1,10 +1,10 @@
 /**
  * Collection of drawers for a cabinet
- * @namespace bins
+ * @namespace bins.Collections
  * @class cabinetDrawers
  * @constructor
  * @extends {Backbone.Collection}
  */
-bins.cabinetDrawers = Backbone.Collection.extend({
+bins.Collections.cabinetDrawers = Backbone.Collection.extend({
   defaults: {model: bins.Drawer}
 });

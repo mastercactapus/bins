@@ -5,7 +5,7 @@
  * @constructor
  * @extends {Backbone.Model}
  */
-bins.Component = Backbone.Model.extend({
+bins.Models.Component = Backbone.Model.extend({
   defaults: function(){
     return {
 

@@ -1,11 +1,11 @@
 /**
  * A cabinet, contains drawers and shows layout
- * @namespace bins
+ * @namespace bins.Models
  * @class Cabinet
  * @constructor
  * @extends {Backbone.Model}
  */
-bins.Cabinet = Backbone.Model.extend({
+bins.Models.Cabinet = Backbone.Model.extend({
   defaults: function(){
     return {
       drawers: new bins.cabinetDrawers,

@@ -3,8 +3,8 @@
    * @constructor
    * @extends {Backbone.Collection}
    * @class  datasheetDB
-   * @namespace bins
+   * @namespace bins.Collections
    */
-bins.datasheetDB = Backbone.Collection.extend({
+bins.Collections.datasheetDB = Backbone.Collection.extend({
   defaults: {model: bins.Datasheet}
 });

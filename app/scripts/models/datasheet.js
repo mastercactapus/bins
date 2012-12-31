@@ -1,11 +1,11 @@
 /**
  * Datasheet object
  * @constructor
- * @namespace bins
+ * @namespace bins.Models
  * @class Datasheet
  * @extends {Backbone.Model}
  */
-bins.Datasheet = Backbone.Model.extend({
+bins.Models.Datasheet = Backbone.Model.extend({
   defaults: function(){
     return {
       /**
