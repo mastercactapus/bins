@@ -1,11 +1,13 @@
-{#cabinet}<div id="cabinet_{.}">{/cabinet}
-{#rows}
-<div style="height:{height}%">
+{<ROW}
+<div class="row" style="height:{height}">
 {#cols}
-<div {#id}id="drawer_{.}" {/id}style="width:{width}%">
-{#rows}{>"cabinet":./}{/rows}
+<div {#id}data-drawer-id="{.}" class="drawer{#selected} selected{/selected}" {/id}style="width:{width}">
+{#rows}{+ROW:./}{/rows}
 </div>
 {/cols}
 </div>
-{/rows}
-{#cabinet}</div>{/cabinet}
+{/ROW}
+
+<div id="cabinet_{cabinet}" class="cabinet">
+{#rows}{+ROW:./}{/rows}
+</div>
