@@ -90,11 +90,11 @@ module.exports = function( grunt ) {
       },
       dustjs: {
         files: ['app/styles/**/*.dust'],
-        tasks: 'dustjs reload'
+        tasks: 'coffee reload'
       },
       concat: {
         files: ['app/scripts/**/*.js'],
-        tasks: 'concat reload'
+        tasks: 'coffee reload'
       },
       reload: {
         files: [
