@@ -21,7 +21,7 @@ function test(){
   drawers.add(_.map(_.range(25),function(i){
     new bins.Models.Drawer
   }));
-  var cab = new bins.Models.Cabinet({"drawers": drawers});
+  cab = new bins.Models.Cabinet({"drawers": drawers});
 
   var cabV = new bins.Views.cabinetView({
     el: $("#test"),
