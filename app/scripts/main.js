@@ -19,7 +19,7 @@ $(document).ready(function(){
 function test(){
   var drawers = new bins.Collections.cabinetDrawers;
   drawers.add(_.map(_.range(25),function(i){
-    new bins.Models.Drawer
+    return new bins.Models.Drawer;
   }));
   cab = new bins.Models.Cabinet({"drawers": drawers});
 
