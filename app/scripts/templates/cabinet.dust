@@ -1,13 +1,7 @@
-{<ROW}
-<div class="row" style="height:{height}">
-{#cols}
-<div {#id}data-drawer-id="{.}" class="drawer{#selected} selected{/selected}" {/id}style="width:{width}">
-{#rows}{+ROW:./}{/rows}
-</div>
-{/cols}
-</div>
-{/ROW}
-
-<div id="cabinet_{cabinet}" class="cabinet">
-{#rows}{+ROW:./}{/rows}
+<div class="cabinet" class="cabinet">
+  <div class="drawers">
+  {#drawers}
+      <div class="drawer" style="width:{@math key="100" method="divide" operand="{width}"/}%"></div>
+  {/drawers}
+  </div>
 </div>
