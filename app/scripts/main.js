@@ -7,7 +7,7 @@ window.bins = {
   init: function() {
     console.log('Hello from Backbone!');
     test();
-    console.log('made that shit');
+    console.log('test mode launched');
   }
 };
 
