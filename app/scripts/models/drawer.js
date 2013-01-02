@@ -24,6 +24,24 @@ bins.Models.Drawer = Backbone.Model.extend({
      * The height of the drawer face in cm (for labels -- future release)
      * @property {Number} labelHeight
      */
-    labelHeight:2
+    labelHeight:2,
+
+    /**
+     * A label to display on the face of the drawer
+     * @property {String} label
+     */
+    label: null,
+
+    /**
+     * Toggles weather this drawer is selected or not
+     * @property {String} selected
+     */
+    selected: false,
+
+    /**
+     * A count, for component searches
+     * @property {Number} numComponents
+     */
+    numComponents: null
   }
 });
