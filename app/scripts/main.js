@@ -1,12 +1,12 @@
 Backbone.Model.prototype.toJSON = function() {
-  var clone = _.clone(this);
+  var clone = _.clone(this.attributes);
   for (var attr in clone) {
     if (clone[attr] && clone[attr]["toJSON"]) {
       clone[attr] = this.attributes[attr].toJSON();
     }
   }
   return clone;
-}
+};
 
 window.bins = {
   Models: {},
