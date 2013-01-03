@@ -12,6 +12,7 @@ bins.Views.cabinetView = Backbone.View.extend({
   render: function() {
     var self = this;
     dust.render("cabinet", this.model.toJSON(), function(err, output){
+      console.log(self.model.toJSON());
       self.$el.html(output);
     });
   }
