@@ -79,7 +79,7 @@ module.exports = function( grunt ) {
     // default watch configuration
     watch: {
       coffee: {
-        files: 'app/scripts/**/*.coffee',
+        files: ['app/scripts/**/*.coffee','app/scripts/**/*.dust','app/scripts/**/*.js'],
         tasks: 'coffee reload'
       },
       compass: {
@@ -89,7 +89,7 @@ module.exports = function( grunt ) {
         tasks: 'compass reload'
       },
       dustjs: {
-        files: ['app/styles/**/*.dust'],
+        files: ['app/scripts/**/*.dust'],
         tasks: 'coffee reload'
       },
       concat: {

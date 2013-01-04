@@ -39,9 +39,9 @@ bins.Models.Drawer = Backbone.Model.extend({
     selected: false,
 
     /**
-     * A count, for component searches
-     * @property {Number} numComponents
+     * Indicates a count for this drawer (e.g. required number or stock count)
+     * @property {Number} count
      */
-    numComponents: null
+    count: -1
   }
 });

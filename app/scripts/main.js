@@ -1,3 +1,12 @@
+Backbone.Model.prototype.toJSON = function() {
+  var clone = _.clone(this.attributes);
+  for (var attr in clone) {
+    if (clone[attr] && clone[attr]["toJSON"]) {
+      clone[attr] = this.attributes[attr].toJSON();
+    }
+  }
+  return clone;
+};
 
 Backbone.Model.prototype.toJSON = function() {
   var clone = _.clone(this.attributes);
@@ -30,7 +39,7 @@ $(document).ready(function(){
 
 function test(){
   var drawers = new bins.Collections.cabinetDrawers;
-  drawers.add(_.map(_.range(25),function(i){
+  drawers.add(_.map(_.range(20),function(i){
     return new bins.Models.Drawer;
   }));
   cab = new bins.Models.Cabinet({"drawers": drawers});
