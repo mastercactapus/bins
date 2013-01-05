@@ -7,8 +7,23 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-contrib-yuidoc');
+
 
   grunt.initConfig({
+    pkg: grunt.file.readJSON('package.json'),
+    yuidoc: {
+      compile: {
+        name: '<%= pkg.name %>',
+        description: '<%= pkg.description %>',
+        version: '<%= pkg.version %>',
+        url: '<%= pkg.homepage %>',
+        options: {
+          paths: 'app/scripts',
+          outdir: 'temp/doc'
+        }
+      }
+    },
     dustjs: {
       compile: {
         files: {
@@ -45,15 +60,23 @@ module.exports = function(grunt) {
       }
     },
     watch: {
-      dustjs: {
+      package_json: {
+        files: 'package.json',
+        tasks: ['yuidoc']
+      },
+      js_files: {
+        files: ['app/scripts/**/*.js'],
+        tasks: ['yuidoc','copy']
+      },
+      dust_files: {
         files: ['app/scripts/**/*.dust'],
         tasks: ['dustjs','concat']
       },
-      concat: {
-        files: ['app/scripts/**/*.js','app/styles/**/*.css'],
+      css_files: {
+        files: ['app/styles/**/*.css'],
         tasks: ['concat','copy']
       },
-      concat_main: {
+      app_dir: {
         files: ['app/*'],
         tasks: 'copy'
       }
@@ -61,6 +84,6 @@ module.exports = function(grunt) {
 
   });
 
-  grunt.registerTask("default", ["clean","copy", "dustjs","concat"]);
+  grunt.registerTask("default", ["clean","yuidoc","copy", "dustjs","concat"]);
   grunt.registerTask("server", ["default","connect","watch"]);
 }
