@@ -46,7 +46,7 @@ function test(){
   cab = new bins.Models.Cabinet({"drawers": drawers});
 
   var cabV = new bins.Views.cabinetView({
-    el: $("#test"),
+    el: $("#content"),
     model: cab
   });
 
