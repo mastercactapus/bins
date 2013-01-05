@@ -1,6 +1,8 @@
 /**
  * A single drawer inside a cabinet, can have different sizes
  * @namespace bins.Models
+ * @module bins
+ * @submodule Models
  * @class Drawer
  * @constructor
  * @extends {Backbone.Model}
@@ -42,6 +44,12 @@ bins.Models.Drawer = Backbone.Model.extend({
      * Indicates a count for this drawer (e.g. required number or stock count)
      * @property {Number} count
      */
-    count: -1
+    count: -1,
+
+    /**
+     * Indicates which cabinet this drawer is in [id]
+     * @property {String} cabinet
+     */
+    cabinet: ""
   }
 });

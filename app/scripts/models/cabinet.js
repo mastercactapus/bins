@@ -2,6 +2,8 @@
  * A cabinet, contains drawers and shows layout
  * @namespace bins.Models
  * @class Cabinet
+ * @module bins
+ * @submodule Models
  * @constructor
  * @extends {Backbone.Model}
  */

@@ -1,5 +1,9 @@
 /**
- * View of a single cabinet
+ * View of a single cabinet.
+ * Can render in whatever size, drawers are sized to fit based on
+ * cabinet width and drawer count.
+ * @module bins
+ * @submodule Views
  * @namespace bins.Views
  * @class cabinetView
  * @constructor
@@ -12,7 +16,6 @@ bins.Views.cabinetView = Backbone.View.extend({
   render: function() {
     var self = this;
     dust.render("cabinet", this.model.toJSON(), function(err, output){
-      console.log(self.model.toJSON());
       self.$el.html(output);
     });
   }

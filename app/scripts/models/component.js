@@ -1,7 +1,9 @@
 /**
  * A basic electronic component
- * @namespace bins
+ * @namespace bins.Models
  * @class  Component
+ * @module bins
+ * @submodule Models
  * @constructor
  * @extends {Backbone.Model}
  */
@@ -17,7 +19,6 @@ bins.Models.Component = Backbone.Model.extend({
 
       /**
        * The number of components available
-       * @type {Number|String}
        * @property {Number|String} stock
        */
       stock: -1,
@@ -64,16 +65,10 @@ bins.Models.Component = Backbone.Model.extend({
       images: [],
 
       /**
-       * The cabinet number/id this component is stored in
-       * @property {Number} cabinet
+       * The drawer number/id this component is stored in [id]
+       * @property {String} drawer
        */
-      cabinet: -1,
-
-      /**
-       * The drawer number/id this component is stored in
-       * @property {Number} drawer
-       */
-      drawer: -1,
+      drawer: "",
 
       /**
        * The slot number/id this component is stored in

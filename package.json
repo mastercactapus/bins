@@ -1,6 +1,7 @@
 {
   "author": "Nathan Caza",
   "name": "bins",
+  "description": "An electronic component catalog system.",
   "version": "0.0.1",
   "dependencies": {},
   "devDependencies": {

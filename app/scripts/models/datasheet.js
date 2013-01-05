@@ -2,6 +2,8 @@
  * Datasheet object
  * @constructor
  * @namespace bins.Models
+ * @module bins
+ * @submodule Models
  * @class Datasheet
  * @extends {Backbone.Model}
  */
