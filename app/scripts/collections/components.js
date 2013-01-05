@@ -1,11 +1,13 @@
 /**
  * Collection of all components
  * @namespace bins.Collections
- * @class componentDB
+ * @class Components
+ * @module bins
+ * @submodule Collections
  * @constructor
  * @extends {Backbone.Collection}
  */
-bins.Collections.componentDB = Backbone.Collection.extend({
+bins.Collections.Components = Backbone.Collection.extend({
   defaults: {
     model: bins.component
   }
