@@ -1,0 +1,31 @@
+.cabinet {
+  background: black;
+  height:100%;
+  width:100%;
+}
+.cabinet > .label {
+  
+}
+.drawers {
+  height:100%;
+}
+ .cabinet .drawer {
+    background: white;
+    border-style: solid;
+    border-width:5px;
+    border-color:black;
+    float:left;
+    color: red;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    text-align: center;
+  }
+  .cabinet .drawer.selected {
+    border-color:green;
+    background:yellow;
+  }
+
+.cabinet .drawer:hover{
+  background:#DDF;
+}
