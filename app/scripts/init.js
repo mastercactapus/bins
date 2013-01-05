@@ -33,11 +33,17 @@ window.bins = {
    */
   Routers: {},
   init: function() {
-    console.log('Hello from Backbone!');
+    Cabinets   = new bins.Collections.Cabinets;
+    Drawers    = new bins.Collections.Drawers;
+    Components = new bins.Collections.Components;
+    Datasheets = new bins.Collections.Datasheets;
+
+
     test();
     console.log('test mode launched');
   }
 };
+
 function test(){
   var drawers = new bins.Collections.cabinetDrawers;
   drawers.add(_.map(_.range(20),function(i){

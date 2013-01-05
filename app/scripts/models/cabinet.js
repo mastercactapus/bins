@@ -10,11 +10,21 @@
 bins.Models.Cabinet = Backbone.Model.extend({
   defaults: function(){
     return {
-      drawers: new bins.Collections.cabinetDrawers,
+      height: 4,
       width: 5,
       label: null,
       description: null
     }
+  },
+  initialize: function() {
+    this.listenTo(this.get('drawers'), 'add', this.addDrawer);
+    this.listenTo(this.get('drawers'), 'reset', this.addAllDrawers);
+  },
+  addDrawer: function(drawer) {
+    var view = new drawerView()
+  },
+  addAllDrawers: function() {
+    this.get('drawers').each(this.addDrawer);
   },
 
   clearSelection: function(){
