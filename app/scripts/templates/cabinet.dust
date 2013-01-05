@@ -2,7 +2,7 @@
 {#label}<div class="label"><p>{.}</p></div>{/label}
   <div class="drawers">
   {#drawers}
-      <div class="drawer" style="width:{@math key="100" method="divide" operand=width/}%;height:{@math key="500" method="divide" operand=$len/}%;">
+      <div class="drawer" style="width:{@math key="100" method="divide" operand=width/}%;height:{@math key="{width}00" method="divide" operand=$len/}%;">
       </div>
   {/drawers}
   </div>
