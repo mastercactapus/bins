@@ -1,9 +1,0 @@
-<div class="cabinet" class="cabinet">
-{#label}<div class="label"><p>{.}</p></div>{/label}
-  <div class="drawers">
-  {#drawers}
-      <div class="drawer" style="width:{@math key="100" method="divide" operand=width/}%;height:{@math key="100" method="divide" operand=height/}%;">
-      </div>
-  {/drawers}
-  </div>
-</div>

@@ -1,0 +1,3 @@
+{#drawers}
+<div style="width:{drawerWidth};height:{drawerHeight}" class="drawer {selected}">{drawerId}</div>
+{/drawers}

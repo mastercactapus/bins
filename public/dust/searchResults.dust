@@ -1,0 +1,18 @@
+  {<searchItem}
+    <li data-id="{_id}">
+      
+      <a href="#" title="Select component" rel="select-component">
+        {title}
+        <p class="text-muted">{type}</p>
+      </a>
+
+    </li>
+{/searchItem}
+
+Results:
+<ul class="nav nav-pills nav-stacked">
+{#.}
+	{+searchItem/}
+{/.}
+</ul>
+

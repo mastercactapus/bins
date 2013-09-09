@@ -1,9 +1,0 @@
-/* Will be compiled down to a single stylesheet with your sass files */
-
-#test {
-  border-style: solid;
-  border-width: 1px;
-  border-color: black;
-  height: 480px;
-  width: 640px;
-}

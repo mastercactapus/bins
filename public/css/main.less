@@ -1,0 +1,38 @@
+body{
+  margin:1em;
+}
+
+[contenteditable] {
+	outline: 0;
+	border: 1px solid #eee;
+
+	&:hover{
+		background:#bbb;
+	}
+	&:focus{
+		background:#ddd;
+		border-color:red;
+	}
+}
+
+.location .cabinet {
+	width:50%;
+	border: 1px black solid;
+	background: #ddd;
+
+	.drawer{
+		border:1px #888 solid;
+		background: #bbb;
+		display: inline-block;
+		&:hover{
+			border:1px #aac solid;
+			background: #eee;
+		}
+		&.selected{
+			&hover{
+				border:1px #99f solid;
+			}
+			background: green;
+		}
+	}
+}
